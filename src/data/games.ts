@@ -1,7 +1,7 @@
 export const gameData = [
   {
     id: '1',
-    title: 'The Legend of Zelda: Orcarina of time',
+    title: 'The Legend of Zelda: Ocarina of time',
     year: 2017,
     description: 'Une aventure épique avec une bande sonore mémorable qui capture parfaitement la nature sauvage d\'Hyrule.',
     coverImage: '/images/TheLegendofZeldaOcarinaofTime3D_image1600w.jpg',
