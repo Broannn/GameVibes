@@ -86,7 +86,7 @@ export const Home = () => {
 
       {/* Disclaimer Section */}
       <footer className="w-full text-center py-4 bg-slate-800 text-gray-400 text-sm">
-        Ce site est un projet fictif dans le cadre de la HEIG-VD
+        Ce site est un projet fictif à but non lucratif et éducationnel dans le cadre d'un cours d'architecture de donnée UX à la HEIG-VD
       </footer>
     </div>
   );

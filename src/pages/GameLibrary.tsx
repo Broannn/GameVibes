@@ -21,21 +21,21 @@ export const GameLibrary = () => {
   const getGameEmotionScore = (gameId: string, emotion: Emotion) => {
     const game = gameData.find(g => g.id === gameId);
     if (!game || !game.tracks.length) return 0;
-    
+
     const totalScore = game.tracks.reduce((sum, track) => sum + track.emotions[emotion], 0);
     return totalScore / game.tracks.length;
   };
 
   const filteredGames = gameData.filter(game => {
     const matchesSearch = game.title.toLowerCase().includes(searchTerm.toLowerCase());
-    
+
     if (!matchesSearch) return false;
-    
+
     if (selectedEmotion) {
       const emotionScore = getGameEmotionScore(game.id, selectedEmotion);
       return emotionScore >= 0.5;
     }
-    
+
     return true;
   }).sort((a, b) => {
     if (selectedEmotion) {
@@ -64,11 +64,10 @@ export const GameLibrary = () => {
           <button
             key={id}
             onClick={() => setSelectedEmotion(selectedEmotion === id ? null : id)}
-            className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${
-              selectedEmotion === id
+            className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${selectedEmotion === id
                 ? 'bg-purple-600 text-white shadow-lg scale-105'
                 : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-            }`}
+              }`}
           >
             {icon}
             <span>{label}</span>
@@ -76,13 +75,6 @@ export const GameLibrary = () => {
         ))}
       </div>
 
-      {selectedEmotion && (
-        <div className="text-center mb-8">
-          <p className="text-gray-400">
-            Affichage des jeux avec un fort impact émotionnel : {emotionFilters.find(e => e.id === selectedEmotion)?.label}
-          </p>
-        </div>
-      )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredGames.map((game) => (
@@ -92,20 +84,20 @@ export const GameLibrary = () => {
             className="group relative bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
           >
             <div className="relative h-48">
-  <img
-    src={game.coverImage}
-    alt={game.title}
-    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-  />
-  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent transition-transform duration-300 group-hover:scale-110"></div>
-  {selectedEmotion && (
-    <div className="absolute top-2 right-2 transition-transform duration-300 transform origin-top-right group-hover:scale-105">
-      <div className="bg-purple-600/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-sm font-medium">
-        {Math.round(getGameEmotionScore(game.id, selectedEmotion) * 100)}%
-      </div>
-    </div>
-  )}
-</div>
+              <img
+                src={game.coverImage}
+                alt={game.title}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent transition-transform duration-300 group-hover:scale-110"></div>
+              {selectedEmotion && (
+                <div className="absolute top-2 right-2 transition-transform duration-300 transform origin-top-right group-hover:scale-105">
+                  <div className="bg-purple-600/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-sm font-medium">
+                    {Math.round(getGameEmotionScore(game.id, selectedEmotion) * 100)}%
+                  </div>
+                </div>
+              )}
+            </div>
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">{game.title}</h3>
               <p className="text-gray-400 text-sm mb-4">{game.year}</p>
