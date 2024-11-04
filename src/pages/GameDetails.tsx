@@ -3,6 +3,24 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Clock, User } from 'lucide-react';
 import { gameData } from '../data/games';
 
+type Emotion = 'joy' | 'wonder' | 'anxiety' | 'sadness' | 'dynamism';
+
+const emotionColors: Record<Emotion, string> = {
+  joy: 'bg-yellow-500',
+  wonder: 'bg-orange-500',
+  anxiety: 'bg-blue-500',
+  sadness: 'bg-purple-500',
+  dynamism: 'bg-red-500'
+};
+
+const emotionLabels: Record<Emotion, string> = {
+  joy: 'Joie',
+  wonder: 'Émerveillement',
+  anxiety: 'Anxiété',
+  sadness: 'Tristesse',
+  dynamism: 'Dynamisme'
+};
+
 export const GameDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -11,6 +29,12 @@ export const GameDetails = () => {
   if (!game) {
     return <div className="text-center py-12">Jeu non trouvé</div>;
   }
+
+  const getStrongestEmotion = (emotions: Record<Emotion, number>): Emotion => {
+    return Object.entries(emotions).reduce((a, b) => 
+      a[1] > b[1] ? a : b
+    )[0] as Emotion;
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -23,38 +47,45 @@ export const GameDetails = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
         <div className="absolute bottom-0 left-0 p-8">
           <h1 className="text-4xl font-bold mb-2">{game.title}</h1>
-          <h2 className="text-l font-semibold mb-2">{game.description}</h2>
           <p className="text-gray-300">{game.year}</p>
         </div>
       </div>
 
       <div className="grid gap-6">
-        {game.tracks.map((track) => (
-          <div
-            key={track.id}
-            onClick={() => navigate(`/analysis/${game.id}/${track.id}`)}
-            className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors cursor-pointer"
-          >
-            <div className="flex items-center justify-between">
-              <div>
-                <h3 className="text-xl font-semibold mb-2">{track.title}</h3>
-                <div className="flex items-center space-x-4 text-gray-400">
-                  <div className="flex items-center">
-                    <User className="w-4 h-4 mr-1" />
-                    {track.composer}
+        {game.tracks.map((track) => {
+          const strongestEmotion = getStrongestEmotion(track.emotions);
+          return (
+            <div
+              key={track.id}
+              onClick={() => navigate(`/analysis/${game.id}/${track.id}`)}
+              className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors cursor-pointer"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="text-xl font-semibold">{track.title}</h3>
+                    <span className={`${emotionColors[strongestEmotion]} px-3 py-1 rounded-full text-sm font-medium`}>
+                      {emotionLabels[strongestEmotion]}
+                    </span>
                   </div>
-                  <div className="flex items-center">
-                    <Clock className="w-4 h-4 mr-1" />
-                    {track.duration}
+                  <div className="flex items-center space-x-4 text-gray-400">
+                    <div className="flex items-center">
+                      <User className="w-4 h-4 mr-1" />
+                      {track.composer}
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {track.duration}
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="text-purple-400 hover:text-purple-300">
-                Analyser →
+                <div className="text-purple-400 hover:text-purple-300">
+                  Analyser →
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
