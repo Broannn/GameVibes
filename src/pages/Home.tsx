@@ -47,7 +47,7 @@ export const Home = () => {
                   </div>
                   <h6 className="text-xl font-semibold">Immersion</h6>
                   <p className="mt-2 mb-4 text-gray-400">
-                  Écoutez les bandes sonores des jeux avec notre lecteur audio interactif.
+                    Écoutez les bandes sonores des jeux avec notre lecteur audio interactif.
                   </p>
                 </div>
               </div>
@@ -61,7 +61,7 @@ export const Home = () => {
                   </div>
                   <h6 className="text-xl font-semibold">Comprendre les Émotions</h6>
                   <p className="mt-2 mb-4 text-gray-400">
-                  Plongez dans l’analyse des émotions que la musique peut évoquer, et voyez comment chaque morceau influence l’ambiance des jeux.
+                    Plongez dans l’analyse des émotions que la musique peut évoquer, et voyez comment chaque morceau influence l’ambiance des jeux.
                   </p>
                 </div>
               </div>
@@ -75,7 +75,7 @@ export const Home = () => {
                   </div>
                   <h6 className="text-xl font-semibold">Explorer et Découvrir</h6>
                   <p className="mt-2 mb-4 text-gray-400">
-                  Parcourez une sélection de morceaux et découvrez ceux qui résonnent le plus avec vous, en fonction des émotions qu'ils dégagent.
+                    Parcourez une sélection de morceaux et découvrez ceux qui résonnent le plus avec vous, en fonction des émotions qu'ils dégagent.
                   </p>
                 </div>
               </div>
@@ -83,6 +83,11 @@ export const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Disclaimer Section */}
+      <footer className="w-full text-center py-4 bg-slate-800 text-gray-400 text-sm">
+        Ce site est un projet fictif dans le cadre de la HEIG-VD
+      </footer>
     </div>
   );
 };
