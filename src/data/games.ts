@@ -3,7 +3,7 @@ export const gameData = [
     id: '1',
     title: 'The Legend of Zelda: Ocarina of time',
     year: 2017,
-    description: 'Une aventure épique avec une bande sonore mémorable qui capture parfaitement la nature sauvage d\'Hyrule.',
+    description: 'Plongez dans une aventure intemporelle où vous incarnez le jeune héros Link, déterminé à sauver Hyrule du mal ancestral. Explorez des donjons mystiques, résolvez des énigmes ingénieuses, et découvrez un monde enchanteur rempli de personnages inoubliables.',
     coverImage: '/images/TheLegendofZeldaOcarinaofTime3D_image1600w.jpg',
     tracks: [
       {
@@ -27,7 +27,7 @@ export const gameData = [
     id: '2',
     title: 'Outer Wilds',
     year: 2019,
-    description: 'Un jeu d\'exploration spatiale captivant où chaque boucle révèle des mystères cachés dans un univers en perpétuel changement. Musique composée par Andrew Prahlow.',
+    description: `Plongez dans une exploration spatiale intrigante où chaque boucle temporelle révèle des secrets fascinants d’un système solaire en perpétuel changement. Parcourez des planètes mystérieuses et résolvez des énigmes pour percer le mystère de l'univers.`,
     coverImage: '/images/outerwild.jpg',
     tracks: [
       {
@@ -39,8 +39,8 @@ export const gameData = [
         audioUrl: '/sounds/Museum.mp3',
         emotions: {
           joy: 0.2,
-          wonder: 0.9,
-          anxiety: 0.5,
+          wonder: 0.8,
+          anxiety: 0.7,
           sadness: 0.2,
           dynamism: 0.3
         }
@@ -96,7 +96,7 @@ export const gameData = [
     id: '4',
   title: 'Dark Souls 3',
   year: 2016,
-  description: 'Une des icônes de la dark fantaisy avec une ambiance propre à la licence des Dark Souls, accompagné par la bande sonore épique de Yuka Kitamura.',
+  description: `Dans un royaume où les feux s'éteignent, vous incarnez un Morteflamme chargé de raviver la Première Flamme pour empêcher l'obscurité éternelle. Explorez les vestiges de civilisations déchues, affrontez des créatures cauchemardesques et découvrez un lore mystérieux imprégné de légendes oubliées.`,
   coverImage: '/images/dark-souls-3.jpg',
   tracks: [
     {
@@ -104,13 +104,13 @@ export const gameData = [
       title: 'Main Theme',
       composer: 'Yuka Kitamura',
       releaseDate: '2016-03-24',
-      duration: '4:02',
+      duration: '2:45',
       audioUrl: '/sounds/dark-souls-3-main-theme.mp3',
       emotions: {
         joy: 0.2,
-        wonder: 0.6,
+        wonder: 0.4,
         anxiety: 0.7,
-        sadness: 0.7,
+        sadness: 0.5,
         dynamism: 0.9
       }
     },
@@ -119,13 +119,13 @@ export const gameData = [
       title: 'Abyss Watchers',
       composer: 'Yuka Kitamura',
       releaseDate: '2016-03-24',
-      duration: '5:15',
+      duration: '4:12',
       audioUrl: '/sounds/dark-souls-3-abyss-watchers.mp3',
       emotions: {
         joy: 0.1,
         wonder: 0.7,
-        anxiety: 0.9,
-        sadness: 0.6,
+        anxiety: 0.7,
+        sadness: 0.9,
         dynamism: 0.8
       }
     },
@@ -134,7 +134,7 @@ export const gameData = [
       title: 'Soul of Cinder',
       composer: 'Yuka Kitamura',
       releaseDate: '2016-03-24',
-      duration: '6:23',
+      duration: '5:52',
       audioUrl: '/sounds/dark-souls-3-soul-of-cinder.mp3',
       emotions: {
         joy: 0.1,
@@ -150,7 +150,7 @@ export const gameData = [
   id: '5',
   title: 'OneShot',
   year: 2016,
-  description: 'Un jeu d\'aventure émotive avec des éléments de puzzle, où le joueur guide un enfant-chat dans une quête pour sauver un monde mystérieux. Musique composée par Nightmargin.',
+  description: 'Plongez dans un monde unique aux côtés de Niko, un enfant-chat cherchant à sauver un univers fragile. Résolvez des énigmes, faites des choix cruciaux, et vivez une aventure émotive qui brise la frontière entre le joueur et le jeu.',
   coverImage: '/images/oneshot.jpg',
   tracks: [
     {
@@ -158,7 +158,7 @@ export const gameData = [
       title: 'On Little Cat Feet',
       composer: 'Nightmargin',
       releaseDate: '2016-12-08',
-      duration: '3:40',
+      duration: '2:35',
       audioUrl: '/sounds/oneshot-on-little-cat-feet.mp3',
       emotions: {
         joy: 0.5,
@@ -173,7 +173,7 @@ export const gameData = [
       title: 'My Burden Is Light',
       composer: 'Nightmargin',
       releaseDate: '2016-12-08',
-      duration: '4:05',
+      duration: '1:55',
       audioUrl: '/sounds/oneshot-my-burden-is-light.mp3',
       emotions: {
         joy: 0.2,
@@ -188,11 +188,11 @@ export const gameData = [
       title: 'Self contained universe',
       composer: 'Nightmargin',
       releaseDate: '2016-12-08',
-      duration: '5:10',
+      duration: '2:20',
       audioUrl: '/sounds/oneshot-self-contained-universe.mp3',
       emotions: {
         joy: 0.4,
-        wonder: 0.9,
+        wonder: 0.7,
         anxiety: 0.2,
         sadness: 1.0,
         dynamism: 0.3
@@ -204,7 +204,7 @@ export const gameData = [
   id: '6',
   title: 'Hollow Knight',
   year: 2017,
-  description: 'Un jeu de plateforme et d\'exploration dans un monde souterrain magnifique et mystérieux, avec une bande sonore envoûtante composée par Christopher Larkin.',
+  description: 'Aventurez-vous dans un royaume souterrain où se mêlent danger et beauté en incarnant un mystérieux chevalier. Explorez des cavernes, affrontez des créatures hostiles et découvrez des secrets enfouis dans ce monde captivant.',
   coverImage: '/images/hollow-knight.jpg',
   tracks: [
     {
@@ -212,7 +212,7 @@ export const gameData = [
       title: 'Main Theme',
       composer: 'Christopher Larkin',
       releaseDate: '2017-02-24',
-      duration: '2:58',
+      duration: '1:36',
       audioUrl: '/sounds/hollow-knight-main-theme.mp3',
       emotions: {
         joy: 0.3,
@@ -227,7 +227,7 @@ export const gameData = [
       title: 'City of Tears',
       composer: 'Christopher Larkin',
       releaseDate: '2017-02-24',
-      duration: '4:12',
+      duration: '2:58',
       audioUrl: '/sounds/hollow-knight-city-of-tears.mp3',
       emotions: {
         joy: 0.2,
@@ -242,7 +242,7 @@ export const gameData = [
       title: 'Hornet',
       composer: 'Christopher Larkin',
       releaseDate: '2017-02-24',
-      duration: '3:46',
+      duration: '2:46',
       audioUrl: '/sounds/hollow-knight-hornet.mp3',
       emotions: {
         joy: 0.4,
@@ -258,7 +258,7 @@ export const gameData = [
   id: '7',
         title: 'Frostpunk', 
         year: 2018, 
-        description: 'Frostpunk est le premier jeu de survie de société. À la tête de la dernière ville sur Terre, vous gérez ses citoyens et ses infrastructures. Que déciderez-vous pour que votre société survive ?', 
+        description: 'Devenez le leader de la dernière ville sur Terre, en gérant les ressources et en prenant des décisions difficiles pour assurer la survie de vos citoyens. Affrontez un monde glacial et hostile où chaque choix peut mener à la survie ou à la ruine.', 
         coverImage: '/images/frostpunk.jpg', 
         tracks: [
             { 
@@ -281,7 +281,7 @@ export const gameData = [
     { id: '8',
       title: 'The Witcher 3: Wild Hunt',
       year: 2015,
-      description: 'The Witcher 3: Wild Hunt est un jeu vidéo de rôle développé par CD Projekt RED. Basés sur la série de livres du même nom de l\'écrivain polonais Andrzej Sapkowski.',
+      description: 'En tant que Geralt de Riv, chassez des monstres, découvrez des secrets cachés et vivez une histoire captivante dans un monde vaste et vibrant. Faites des choix aux conséquences profondes, dans une quête où l’humanité et le surnaturel se mêlent pour créer un voyage inoubliable.',
       coverImage: '/images/witcher3.png',
       tracks: [
           { 
@@ -305,7 +305,7 @@ export const gameData = [
               composer: 'Marcin Przybyłowicz', 
               releaseDate: '2015-05-19', 
               duration: '3:06', 
-              audioUrl: '/sounds/witcher-3-spikeroog.mp3', 
+              audioUrl: '/sounds/witcher3-spikeroog.mp3', 
               emotions: { 
                   joy: 0.3, 
                   wonder: 0.3, 
@@ -320,7 +320,7 @@ export const gameData = [
               composer: 'Piotr Musial', 
               releaseDate: '2016-05-19', 
               duration: '2:04', 
-              audioUrl: '/sounds/witcher-3-for-honor-for-toussaint.mp3', 
+              audioUrl: '/sounds/witcher3-for-honor-for-toussaint.mp3', 
               emotions: { 
                   joy: 0.5, 
                   wonder: 0.4, 
@@ -334,7 +334,7 @@ export const gameData = [
   { id: '9',
       title: 'World of Warcraft',
       year: 2004,
-      description: 'World of Warcraft (abrégé WoW) est un jeu vidéo de type MMORPG.',
+      description: 'Rejoignez des millions de héros dans un univers en ligne vivant et vibrant, où chaque quête est une nouvelle aventure. Explorez des terres mystiques, affrontez des créatures légendaires et laissez votre marque sur l’histoire d’Azeroth.',
       coverImage: '/images/wow.avif',
       tracks: [
           { 
@@ -387,7 +387,7 @@ export const gameData = [
   { id: '10',
       title: 'Jusant',
       year: 2023,
-      description: 'Jusant est un jeu vidéo de plates-formes, développé et édité par Don\'t Nod Entertainment. Le joueur contrôle un vagabond solitaire alors qu\'il escalade une tour isolée, remplie d\'artefacts de civilisations passées.',
+      description: `Escaladez une mystérieuse tour remplie de vestiges et d'énigmes dans un environnement isolé et majestueux. En tant que vagabond solitaire, découvrez des indices sur les civilisations passées et explorez un monde vertical.`,
       coverImage: '/images/jusant.jpg',
       tracks: [
           { 
@@ -425,8 +425,8 @@ export const gameData = [
   {
     id: '11',
     title: 'Borderlands 2',
-    year: 2017,
-    description: 'Un jeu de tir à la première personne avec une bande sonore de Jesper Kyd et Cris Velasco.',
+    year: 2009,
+    description: `Entrez dans le chaos hilarant de Pandora, où vous et votre équipe affronterez des ennemis farfelus et des défis explosifs. Avec des armes excentriques à profusion et une ambiance unique, préparez-vous pour une aventure où l'humour est aussi tranchant que le danger.`,
     coverImage: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fa9eed36-2f34-4630-bc30-91e752703824/d5fi1ff-f43a7adb-e11a-4f83-a972-2744199c6cfb.jpg/v1/fill/w_1600,h_1011,q_75,strp/borderlands_2_wallpaper_by_dragonxboy55_d5fi1ff-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAxMSIsInBhdGgiOiJcL2ZcL2ZhOWVlZDM2LTJmMzQtNDYzMC1iYzMwLTkxZTc1MjcwMzgyNFwvZDVmaTFmZi1mNDNhN2FkYi1lMTFhLTRmODMtYTk3Mi0yNzQ0MTk5YzZjZmIuanBnIiwid2lkdGgiOiI8PTE2MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.5kFtEgZJ_BZF8k_wIkBCZpPmGbAF1rETBKWQLw7kytI',
     tracks: [
       {
@@ -434,7 +434,7 @@ export const gameData = [
         title: 'Short Change Hero',
         composer: 'The Heavy',
         releaseDate: '2009-10-13',
-        duration: '2:07',
+        duration: '3:57',
         audioUrl: '/sounds/borderland2-short-change-hero.mp3',
         emotions: {
           joy: 0.2,
@@ -450,7 +450,7 @@ export const gameData = [
         composer: 'Jesper Kyd',
         releaseDate: '2012-09-18',
         duration: '3:30',
-        audioUrl: 'borderland2-ice.mp3',
+        audioUrl: '/sounds/borderland2-ice.mp3',
         emotions: {
           joy: 0.3,
           wonder: 0.6,
