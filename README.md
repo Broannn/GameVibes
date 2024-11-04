@@ -21,7 +21,7 @@
 
 1. Clonez le dépôt :
    ```bash
-   git clone https://github.com/VOTRE_NOM_UTILISATEUR/NOM_DU_DEPOT.git
+   git clone https://github.com/Broannn/GameVibes.git
    ```
 2. Accédez au dossier du projet :
    ```bash
