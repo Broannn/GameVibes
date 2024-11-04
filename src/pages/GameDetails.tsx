@@ -23,6 +23,7 @@ export const GameDetails = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
         <div className="absolute bottom-0 left-0 p-8">
           <h1 className="text-4xl font-bold mb-2">{game.title}</h1>
+          <h2 className="text-l font-semibold mb-2">{game.description}</h2>
           <p className="text-gray-300">{game.year}</p>
         </div>
       </div>
