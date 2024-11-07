@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Clock, User } from 'lucide-react';
+import { Clock, User, ExternalLink } from 'lucide-react';
 import { gameData } from '../data/games';
 
 type Emotion = 'joy' | 'wonder' | 'anxiety' | 'sadness' | 'dynamism';
@@ -21,6 +21,12 @@ const emotionLabels: Record<Emotion, string> = {
   dynamism: 'Dynamisme'
 };
 
+const getGameUrl = (title: string): string => {
+  // Remove special characters and replace spaces with hyphens
+  const formattedTitle = title.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-');
+  return `https://store.steampowered.com/search/?term=${formattedTitle}`;
+};
+
 export const GameDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -38,16 +44,30 @@ export const GameDetails = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="relative h-64 md:h-96 rounded-xl overflow-hidden mb-8">
-        <img
-          src={game.coverImage}
-          alt={game.title}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 p-8">
-          <h1 className="text-4xl font-bold mb-2">{game.title}</h1>
-          <p className="text-gray-300">{game.year}</p>
+      <div className="bg-slate-800 rounded-xl overflow-hidden mb-8">
+        <div className="relative h-64 md:h-96">
+          <img
+            src={game.coverImage}
+            alt={game.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
+          <a
+            href={getGameUrl(game.title)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute top-4 right-4 p-2 bg-slate-800/80 hover:bg-slate-700 rounded-lg backdrop-blur-sm transition-all duration-300 group"
+            title="Voir sur Steam"
+          >
+            <ExternalLink className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
+          </a>
+          <div className="absolute bottom-0 left-0 p-8">
+            <h1 className="text-4xl font-bold mb-2">{game.title}</h1>
+            <p className="text-gray-300">{game.year}</p>
+          </div>
+        </div>
+        <div className="p-6 border-t border-slate-700">
+          <p className="text-gray-300 leading-relaxed">{game.description}</p>
         </div>
       </div>
 
