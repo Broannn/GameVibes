@@ -209,17 +209,17 @@ export const gameData = [
   tracks: [
     {
       id: '1',
-      title: 'Main Theme',
+      title: 'Hollow Knight',
       composer: 'Christopher Larkin',
       releaseDate: '2017-02-24',
       duration: '1:36',
       audioUrl: '/sounds/hollow-knight-main-theme.mp3',
       emotions: {
-        joy: 0.3,
-        wonder: 1.0,
-        anxiety: 0.6,
-        sadness: 0.8,
-        dynamism: 0.7
+        joy: 0.1,
+        wonder: 0.6,
+        anxiety: 0.8,
+        sadness: 1.0,
+        dynamism: 0.3
       }
     },
     {
@@ -294,9 +294,9 @@ export const gameData = [
               emotions:{
                   joy: 0.2,
                   wonder: 0.6,
-                  anxiety: 0.4,
+                  anxiety: 0.5,
                   sadness: 0.2,
-                  dynamism: 0.7 
+                  dynamism: 0.5 
               }
           },
           { 
@@ -307,11 +307,11 @@ export const gameData = [
               duration: '3:06', 
               audioUrl: '/sounds/witcher3-spikeroog.mp3', 
               emotions: { 
-                  joy: 0.3, 
-                  wonder: 0.3, 
+                  joy: 0.6, 
+                  wonder: 0.7, 
                   anxiety: 0.1, 
                   sadness: 0.2, 
-                  dynamism: 0.3 
+                  dynamism: 0.4 
               } 
           },
           { 
@@ -345,11 +345,11 @@ export const gameData = [
               duration: '3:05',
               audioUrl: '/sounds/wow-elwynn-forest.mp3',
               emotions:{
-                  joy: 0.4,
-                  wonder: 0.4,
-                  anxiety: 0.1,
+                  joy: 0.5,
+                  wonder: 0.5,
+                  anxiety: 0.5,
                   sadness: 0.2,
-                  dynamism: 0.3 
+                  dynamism: 0.2
               }
           },
           { 
@@ -364,7 +364,7 @@ export const gameData = [
                   wonder: 0.7, 
                   anxiety: 0.1, 
                   sadness: 0.1, 
-                  dynamism: 0.8 
+                  dynamism: 1.0 
               } 
           },
           { 
@@ -377,7 +377,7 @@ export const gameData = [
               emotions: { 
                   joy: 0.1, 
                   wonder: 0.7, 
-                  anxiety: 0.6, 
+                  anxiety: 0.4, 
                   sadness: 0.9, 
                   dynamism: 0.2 
               } 
@@ -398,11 +398,11 @@ export const gameData = [
               duration: '1:49',
               audioUrl: '/sounds/jusant-migration.mp3',
               emotions:{
-                  joy: 0.6,
+                  joy: 0.8,
                   wonder: 1.0,
                   anxiety: 0.1,
                   sadness: 0.1,
-                  dynamism: 0.3 
+                  dynamism: 0.4 
               }
           },
           { 
@@ -416,7 +416,7 @@ export const gameData = [
                   joy: 0.4, 
                   wonder: 1.0, 
                   anxiety: 0.2, 
-                  sadness: 0.4, 
+                  sadness: 0.6, 
                   dynamism: 0.6 
               } 
           }
@@ -438,10 +438,10 @@ export const gameData = [
         audioUrl: '/sounds/borderland2-short-change-hero.mp3',
         emotions: {
           joy: 0.2,
-          wonder: 0.6,
+          wonder: 0.3,
           anxiety: 0.2,
-          sadness: 0.8,
-          dynamism: 0.4
+          sadness: 0.6,
+          dynamism: 1.0
         }
       },
       {
@@ -457,8 +457,110 @@ export const gameData = [
           anxiety: 0.8,
           sadness: 0.4,
           dynamism: 0.7
+        },
+      }
+    ]
+  },
+  {
+    id: '12',
+    title: 'Mario Kart Wii',
+    year: 2008, 
+    description: `Foncez sur les circuits emblématiques de Mario Kart Wii, où fun et compétition se mêlent dans des courses endiablées. Défiez vos amis, évitez les carapaces, et préparez-vous à des moments inoubliables.`,
+    coverImage: '/images/mario-kart-wii.jpg',
+    tracks: [
+      {
+        id: '1',
+        title: 'Coconut Mall',
+        composer: 'Asuka Ohta, Ryo Nagamatsu',
+        releaseDate: '2008-04-10', 
+        duration: '2:35', 
+        audioUrl: '/sounds/mario-kart-coconut-mall.mp3',
+        emotions: {
+          joy: 1.0,
+          wonder: 0.3,
+          anxiety: 0.1,
+          sadness: 0.0,
+          dynamism: 0.7
         }
       }
     ]
-  }
+  },
+  {
+    id: '13',
+    title: 'Pokémon Rouge/Bleu',
+    year: 1996, 
+    description: `Explorez le monde fascinant de Kanto, capturez des Pokémon, et devenez le Maître de la Ligue Pokémon. Entre aventures épiques et mystères inquiétants, vivez une quête inoubliable qui a marqué l'histoire du jeu vidéo.`,
+    coverImage: '/images/pokemon-red-blue.jpg',
+    tracks: [
+      {
+        id: '1',
+        title: 'Lavender Town',
+        composer: 'Junichi Masuda',
+        releaseDate: '1996-02-27', 
+        duration: '1:42', 
+        audioUrl: '/sounds/pokemon-lavender-town.mp3',
+        emotions: {
+          joy: 0.1,
+          wonder: 0.3,
+          anxiety: 1.0,
+          sadness: 0.6,
+          dynamism: 0.3
+        }
+      }
+    ]
+  },
+  {
+    id: '14',
+  title: 'VA-11 HALL-A',
+  year: 2016,
+  description: `Plongez dans le monde cyberpunk de Glitch City, où chaque cocktail que vous préparez dévoile une nouvelle histoire. Écoutez une bande-son envoûtante tout en explorant les secrets et les drames de vos clients.`,
+  coverImage: '/images/va11-halla.webp',
+  tracks: [
+    {
+      id: '1',
+      title: 'Every Day is Night',
+      composer: 'Michael "Garoad" Kelly',
+      releaseDate: '2016-06-21',
+      duration: '3:40',
+      audioUrl: '/sounds/va11-halla-every-day-is-night.mp3',
+      emotions: {
+        joy: 0.8,
+        wonder: 0.4,
+        anxiety: 0.3,
+        sadness: 0.3,
+        dynamism: 0.6
+      }
+    },
+    {
+      id: '2',
+      title: 'Safe Haven',
+      composer: 'Michael "Garoad" Kelly',
+      releaseDate: '2016-06-21',
+      duration: '2:40',
+      audioUrl: '/sounds/va11-halla-safe-haven.mp3',
+      emotions: {
+        joy: 0.5,
+        wonder: 0.7,
+        anxiety: 0.1,
+        sadness: 0.3,
+        dynamism: 0.6
+      }
+    },
+    {
+      id: '3',
+      title: 'Neo Avatar',
+      composer: 'Michael "Garoad" Kelly',
+      releaseDate: '2016-06-21',
+      duration: '3:42',
+      audioUrl: '/sounds/va11-halla-neo-avatar.mp3',
+      emotions: {
+        joy: 0.5,
+        wonder: 0.8,
+        anxiety: 0.2,
+        sadness: 0.3,
+        dynamism: 1.0
+      }
+    }
+  ]
+}
 ];
