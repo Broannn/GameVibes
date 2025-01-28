@@ -45,7 +45,7 @@ export const GameDetails = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="bg-slate-800 rounded-xl overflow-hidden mb-8">
-        <div className="relative h-64 md:h-96">
+        <div className="relative h-48 sm:h-64 md:h-96">
           <img
             src={game.coverImage}
             alt={game.title}
@@ -56,17 +56,17 @@ export const GameDetails = () => {
             href={getGameUrl(game.title)}
             target="_blank"
             rel="noopener noreferrer"
-            className="absolute top-4 right-4 p-2 bg-slate-800/80 hover:bg-slate-700 rounded-lg backdrop-blur-sm transition-all duration-300 group"
+            className="absolute top-2 sm:top-4 right-2 sm:right-4 p-2 bg-slate-800/80 hover:bg-slate-700 rounded-lg backdrop-blur-sm transition-all duration-300 group"
             title="Voir sur Steam"
           >
             <ExternalLink className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
           </a>
-          <div className="absolute bottom-0 left-0 p-8">
-            <h1 className="text-4xl font-bold mb-2">{game.title}</h1>
+          <div className="absolute bottom-0 left-0 p-4 sm:p-8">
+            <h1 className="text-2xl sm:text-4xl font-bold mb-2">{game.title}</h1>
             <p className="text-gray-300">{game.year}</p>
           </div>
         </div>
-        <div className="p-6 border-t border-slate-700">
+        <div className="p-4 sm:p-6 border-t border-slate-700">
           <p className="text-gray-300 leading-relaxed">{game.description}</p>
         </div>
       </div>
@@ -78,17 +78,17 @@ export const GameDetails = () => {
             <div
               key={track.id}
               onClick={() => navigate(`/analysis/${game.id}/${track.id}`)}
-              className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors cursor-pointer"
+              className="bg-slate-800 rounded-lg p-4 sm:p-6 hover:bg-slate-700 transition-colors cursor-pointer"
             >
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-xl font-semibold">{track.title}</h3>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-2">
+                    <h3 className="text-lg sm:text-xl font-semibold">{track.title}</h3>
                     <span className={`${emotionColors[strongestEmotion]} px-3 py-1 rounded-full text-sm font-medium`}>
                       {emotionLabels[strongestEmotion]}
                     </span>
                   </div>
-                  <div className="flex items-center space-x-4 text-gray-400">
+                  <div className="flex flex-wrap gap-4 text-gray-400 text-sm">
                     <div className="flex items-center">
                       <User className="w-4 h-4 mr-1" />
                       {track.composer}
@@ -99,7 +99,7 @@ export const GameDetails = () => {
                     </div>
                   </div>
                 </div>
-                <div className="text-purple-400 hover:text-purple-300">
+                <div className="text-purple-400 hover:text-purple-300 sm:text-right">
                   Analyser →
                 </div>
               </div>

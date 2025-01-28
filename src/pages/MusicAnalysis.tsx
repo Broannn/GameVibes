@@ -166,16 +166,27 @@ export const MusicAnalysis = () => {
           stepSize: 20,
         },
         grid: {
-          color: 'rgba(255, 255, 255, 0.1)',
+          color: 'rgba(255, 255, 255, 0.15)',
         },
         angleLines: {
-          color: 'rgba(255, 255, 255, 0.1)',
+          color: 'rgba(255, 255, 255, 0.15)',
         },
         pointLabels: {
           color: 'rgba(255, 255, 255, 0.9)',
+          padding: 8,
+          centerPointLabels: true,
           font: {
-            size: 14,
+            size: 10,
+            weight: 'bold',
+            family: 'system-ui'
           },
+          callback: (value: string) => {
+            // Raccourcir "Émerveillement" en "Émerv." sur mobile
+            if (window.innerWidth < 640 && value === 'Émerveillement') {
+              return 'Émerv.';
+            }
+            return value;
+          }
         },
       },
     },
@@ -194,14 +205,14 @@ export const MusicAnalysis = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
-        <div className="bg-slate-800 rounded-lg p-8 mb-8">
-          <h1 className="text-3xl font-bold mb-2">{track.title}</h1>
+        <div className="bg-slate-800 rounded-lg p-4 sm:p-8 mb-8">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-2">{track.title}</h1>
           <div className="text-gray-400 mb-6">
             de {game.title} ({game.year})
           </div>
 
           {/* Audio Player */}
-          <div className="bg-slate-700 p-6 rounded-lg mb-8">
+          <div className="bg-slate-700 p-4 sm:p-6 rounded-lg mb-6 sm:mb-8">
             <audio ref={audioRef} src={track.audioUrl} />
             
             {/* Progress Bar */}
@@ -219,7 +230,7 @@ export const MusicAnalysis = () => {
             </div>
 
             {/* Controls */}
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:justify-between">
               <div className="flex items-center space-x-4">
                 <button
                   onClick={togglePlay}
@@ -233,7 +244,7 @@ export const MusicAnalysis = () => {
                   <span>{isPlaying ? 'Pause' : 'Écouter'}</span>
                 </button>
 
-                <div className="text-gray-300 min-w-[100px]">
+                <div className="text-gray-300 min-w-[80px] sm:min-w-[100px] text-sm sm:text-base">
                   {formatTime(currentTime)} / {formatTime(duration)}
                 </div>
               </div>
@@ -258,7 +269,7 @@ export const MusicAnalysis = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6 sm:mb-8">
             <div className="bg-slate-700 p-4 rounded-lg">
               <div className="text-sm text-gray-400 mb-1">Compositeur</div>
               <div className="font-semibold">{track.composer}</div>
@@ -276,15 +287,29 @@ export const MusicAnalysis = () => {
             </div>
           </div>
 
-            <div className="bg-slate-700 p-6 rounded-lg mb-8">
-            <h3 className="text-lg font-semibold mb-4">Trouvez-vous que le schéma en dessous correspond à la musique ?</h3>
+          <div className="bg-slate-700 p-4 sm:p-6 rounded-lg mb-6 sm:mb-8">
+            <h3 className="text-base sm:text-lg font-semibold mb-4">Trouvez-vous que le schéma en dessous correspond à la musique ?</h3>
             <RatingStars rating={playedRating} setRating={setPlayedRating} />
             </div>
           
-          <div className="bg-slate-900 rounded-lg p-6">
-            <h2 className="text-xl font-semibold mb-6">Analyse Émotionnelle</h2>
-            <div className="aspect-square max-w-xl mx-auto">
+          <div className="bg-slate-900 rounded-lg p-4 sm:p-6 lg:p-8">
+            <h2 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">Analyse Émotionnelle</h2>
+            <div className="h-[350px] sm:h-[450px] lg:h-[550px] w-full max-w-3xl mx-auto">
               <Radar data={chartData} options={chartOptions} />
+            </div>
+            <div className="mt-6 grid grid-cols-2 sm:grid-cols-5 gap-3 text-center text-sm">
+              {Object.entries(track.emotions).map(([emotion, value]) => (
+                <div key={emotion} className="bg-slate-800 rounded-lg p-2 sm:p-3">
+                  <div className="font-medium mb-1">{
+                    emotion === 'joy' ? 'Joie' :
+                    emotion === 'wonder' ? (window.innerWidth < 640 ? 'Émerv.' : 'Émerveillement') :
+                    emotion === 'anxiety' ? 'Anxiété' :
+                    emotion === 'sadness' ? 'Tristesse' :
+                    'Dynamisme'
+                  }</div>
+                  <div className="text-purple-400 font-bold text-lg">{Math.round(value * 100)}%</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
