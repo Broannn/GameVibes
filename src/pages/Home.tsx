@@ -1,88 +1,85 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Music2, Headphones, Heart, Sparkles } from 'lucide-react';
+import { Music2, Headphones, AudioWaveform as Waveform, Gamepad2 } from 'lucide-react';
 
 export const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative min-h-[calc(100vh-4rem)]">
-      {/* Hero Section */}
-      <div className="relative pt-12 sm:pt-16 pb-24 sm:pb-32 flex content-center items-center justify-center min-h-[75vh]">
-        <div className="absolute top-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center">
-          <span className="w-full h-full absolute opacity-75 bg-gradient-to-t from-slate-900 via-slate-900/90 to-slate-900/50"></span>
-        </div>
-        <div className="container relative mx-auto px-4">
-          <div className="items-center flex flex-wrap">
-            <div className="w-full lg:w-8/12 xl:w-6/12 px-4 ml-auto mr-auto text-center">
-              <div className="flex justify-center mb-8">
-                <Music2 className="h-12 w-12 sm:h-16 sm:w-16 text-purple-400" />
-              </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4 sm:mb-6">
-                Découvrez les émotions dans la musique de jeux
-              </h1>
-              <p className="text-base sm:text-lg text-gray-300 mb-8 sm:mb-12">
-                Explorez comment les bandes sonores des jeux vidéo façonnent nos expériences de jeu à travers une analyse émotionnelle. Plongez dans un monde où musique et émotions s'entremêlent.
-              </p>
+    <div className="relative min-h-[calc(100vh-4rem)] overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1614624532983-4ce03382d63d?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-900/90 to-purple-900/50"></div>
+      </div>
+      
+      <div className="relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
+          <div className="text-center lg:text-left">
+            <div className="inline-flex items-center justify-center p-2 bg-purple-500/10 rounded-2xl mb-8">
+              <Music2 className="h-6 w-6 text-purple-400 animate-pulse" />
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight pb-2">
+              <span className="block text-white">Explorez les émotions dans</span>
+              <span className="inline-block bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text mt-2">
+               la musique des jeux vidéo
+              </span>
+            </h1>
+
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button
                 onClick={() => navigate('/library')}
-                className="bg-purple-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
+                className="group relative px-6 py-3 text-lg font-semibold text-white bg-purple-600 rounded-lg overflow-hidden transition-all duration-300 hover:bg-purple-700 hover:scale-105"
               >
-                Commencer l'Exploration
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  <Gamepad2 className="w-5 h-5" />
+                  Explorer la bibliothèque
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
+            </div>
+          </div>
+
+          <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+              <div className="relative p-6 bg-slate-800 ring-1 ring-slate-700/50 rounded-lg">
+                <div className="flex items-center justify-center w-12 h-12 bg-purple-500/10 rounded-xl mb-4">
+                  <Waveform className="w-6 h-6 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Analyse émotionnelle</h3>
+                <p className="text-slate-400">Découvrez l'impact émotionnel unique de chaque bande sonore</p>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+              <div className="relative p-6 bg-slate-800 ring-1 ring-slate-700/50 rounded-lg">
+                <div className="flex items-center justify-center w-12 h-12 bg-purple-500/10 rounded-xl mb-4">
+                  <Headphones className="w-6 h-6 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Expérience immersive</h3>
+                <p className="text-slate-400">Plongez dans l'univers sonore de vos jeux préférés</p>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+              <div className="relative p-6 bg-slate-800 ring-1 ring-slate-700/50 rounded-lg">
+                <div className="flex items-center justify-center w-12 h-12 bg-purple-500/10 rounded-xl mb-4">
+                  <Music2 className="w-6 h-6 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Bibliothèque riche</h3>
+                <p className="text-slate-400">Une collection diversifiée de bandes sonores légendaires</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Features Section */}
-      <section className="pb-12 sm:pb-20 bg-slate-900 -mt-16 sm:-mt-24">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap">
-            <div className="pt-4 sm:pt-6 lg:pt-12 w-full md:w-4/12 px-4 text-center">
-              <div className="relative flex flex-col min-w-0 break-words bg-slate-800 w-full mb-8 shadow-lg rounded-lg p-8">
-                <div className="px-4 py-5 flex-auto">
-                  <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-purple-600">
-                    <Headphones className="w-6 h-6" />
-                  </div>
-                  <h6 className="text-lg sm:text-xl font-semibold">Expérience Immersive</h6>
-                  <p className="mt-2 mb-4 text-gray-400 text-sm sm:text-base">
-                    Plongez dans vos bandes sonores préférées avec notre lecteur audio interactif.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full md:w-4/12 px-4 text-center">
-              <div className="relative flex flex-col min-w-0 break-words bg-slate-800 w-full mb-8 shadow-lg rounded-lg p-8">
-                <div className="px-4 py-5 flex-auto">
-                  <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-purple-600">
-                    <Heart className="w-6 h-6" />
-                  </div>
-                  <h6 className="text-xl font-semibold">Analyse Émotionnelle</h6>
-                  <p className="mt-2 mb-4 text-gray-400">
-                    Comprenez l'impact émotionnel de chaque morceau grâce à une analyse détaillée.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-              <div className="relative flex flex-col min-w-0 break-words bg-slate-800 w-full mb-8 shadow-lg rounded-lg p-8">
-                <div className="px-4 py-5 flex-auto">
-                  <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-purple-600">
-                    <Sparkles className="w-6 h-6" />
-                  </div>
-                  <h6 className="text-xl font-semibold">Découvrez des Pépites</h6>
-                  <p className="mt-2 mb-4 text-gray-400">
-                    Explorez et découvrez de nouvelles bandes sonores selon leur résonance émotionnelle.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg className="w-full h-24 fill-current text-slate-900" viewBox="0 0 1440 74" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,37 C240,74 480,74 720,37 C960,0 1200,0 1440,37 L1440,74 L0,74 Z" />
+        </svg>
+      </div>
     </div>
   );
 };
