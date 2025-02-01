@@ -471,6 +471,61 @@ export const gameData = [
           sadness: 0.4,
           dynamism: 0.7
         }
+        
+      }
+    ]
+  },
+  {
+    id: '12',
+    title: 'VA-11 HALL-A',
+    year: 2016,
+    description: `Plongez dans le monde cyberpunk de Glitch City, où chaque cocktail que vous préparez dévoile une nouvelle histoire. Écoutez une bande-son envoûtante tout en explorant les secrets et les drames de vos clients.`,
+    coverImage: '/images/va11-halla.webp',
+    tracks: [
+      {
+        id: '1',
+        title: 'Every Day is Night',
+        composer: 'Michael "Garoad" Kelly',
+        releaseDate: '2016-06-21',
+        duration: '3:40',
+        audioUrl: '/sounds/va11-halla-every-day-is-night.mp3',
+        emotions: {
+          joy: 0.8,
+          wonder: 0.4,
+          anxiety: 0.3,
+          sadness: 0.3,
+          dynamism: 0.6
+        }
+      },
+      {
+        id: '2',
+        title: 'Safe Haven',
+        composer: 'Michael "Garoad" Kelly',
+        releaseDate: '2016-06-21',
+        duration: '2:40',
+        audioUrl: '/sounds/va11-halla-safe-haven.mp3',
+        emotions: {
+          joy: 0.5,
+          wonder: 0.7,
+          anxiety: 0.1,
+          sadness: 0.3,
+          dynamism: 0.6
+        }
+      },
+      {
+        id: '3',
+        title: 'Neo Avatar',
+        composer: 'Michael "Garoad" Kelly',
+        releaseDate: '2016-06-21',
+        duration: '3:42',
+        audioUrl: '/sounds/va11-halla-neo-avatar.mp3',
+        emotions: {
+          joy: 0.5,
+          wonder: 0.8,
+          anxiety: 0.2,
+          sadness: 0.3,
+          dynamism: 1.0
+        }
       }
     ]
   }
