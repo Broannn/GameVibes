@@ -528,5 +528,170 @@ export const gameData = [
         }
       }
     ]
+  },
+  {
+    id: '13',
+    title: 'Minecraft',
+    year: 2011,
+    steamUrl: null,
+    description: 'Un monde ouvert de créativité infinie où les joueurs peuvent construire, explorer et survivre au rythme d\'une bande sonore apaisante composée par C418.',
+    coverImage: '/images/minecraft.jpg',
+    tracks: [
+      {
+        id: '1',
+        title: 'Aria Math',
+        composer: 'C418',
+        releaseDate: '2011-11-18',
+        duration: '4:11',
+        audioUrl: '/sounds/minecraft-aria-math.mp3',
+        emotions: {
+          joy: 0.6,
+          wonder: 0.8,
+          anxiety: 0.1,
+          sadness: 0.2,
+          dynamism: 0.5
+        }
+      },
+      {
+        id: '2',
+        title: 'Subwoofer Lullaby',
+        composer: 'C418',
+        releaseDate: '2011-11-18',
+        duration: '3:28',
+        audioUrl: '/sounds/minecraft-subwoofer-lullaby.mp3',
+        emotions: {
+          joy: 0.4,
+          wonder: 0.7,
+          anxiety: 0.1,
+          sadness: 0.3,
+          dynamism: 0.2
+        }
+      },
+      {
+        id: '3',
+        title: 'Sweden',
+        composer: 'C418',
+        releaseDate: '2011-11-18',
+        duration: '3:35',
+        audioUrl: '/sounds/minecraft-sweden.mp3',
+        emotions: {
+          joy: 0.5,
+          wonder: 0.9,
+          anxiety: 0.1,
+          sadness: 0.4,
+          dynamism: 0.3
+        }
+      }
+    ]
+  },
+  {
+    id: '14',
+    title: 'OMORI',
+    year: 2020,
+    steamUrl: 'https://store.steampowered.com/app/1150690/OMORI/',
+    description: 'Une aventure psychologique unique explorant les thèmes de l\'amitié, de l\'anxiété et des souvenirs, accompagnée d\'une bande sonore émouvante.',
+    coverImage: '/images/omori.jpg',
+    tracks: [
+      {
+        id: '1',
+        title: 'By Your Side',
+        composer: 'OMOCAT',
+        releaseDate: '2020-12-25',
+        duration: '2:54',
+        audioUrl: '/sounds/omori-by-your-side.mp3',
+        emotions: {
+          joy: 0.7,
+          wonder: 0.6,
+          anxiety: 0.2,
+          sadness: 0.4,
+          dynamism: 0.5
+        }
+      },
+      {
+        id: '2',
+        title: 'A Home for Flowers (Tulip)',
+        composer: 'OMOCAT',
+        releaseDate: '2020-12-25',
+        duration: '3:12',
+        audioUrl: '/sounds/omori-a-home-for-flowers.mp3',
+        emotions: {
+          joy: 0.3,
+          wonder: 0.5,
+          anxiety: 0.4,
+          sadness: 0.8,
+          dynamism: 0.3
+        }
+      },
+      {
+        id: '3',
+        title: 'Trees...',
+        composer: 'OMOCAT',
+        releaseDate: '2020-12-25',
+        duration: '2:47',
+        audioUrl: '/sounds/omori-trees.mp3',
+        emotions: {
+          joy: 0.2,
+          wonder: 0.7,
+          anxiety: 0.6,
+          sadness: 0.7,
+          dynamism: 0.4
+        }
+      }
+    ]
+  },
+  {
+    id: '15',
+    title: 'Undertale',
+    year: 2015,
+    steamUrl: 'https://store.steampowered.com/app/391540/Undertale/',
+    description: 'Un RPG unique où chaque rencontre peut être résolue sans violence. La bande sonore emblématique de Toby Fox accompagne parfaitement cette aventure touchante remplie d\'humour et d\'émotion.',
+    coverImage: '/images/undertale.png',
+    tracks: [
+      {
+        id: '1',
+        title: 'Waterfall',
+        composer: 'Toby Fox',
+        releaseDate: '2015-09-15',
+        duration: '2:46',
+        audioUrl: '/sounds/undertale-waterfall.mp3',
+        emotions: {
+          joy: 0.3,
+          wonder: 0.9,
+          anxiety: 0.2,
+          sadness: 0.4,
+          dynamism: 0.5
+        }
+      },
+      {
+        id: '2',
+        title: 'Undertale',
+        composer: 'Toby Fox',
+        releaseDate: '2015-09-15',
+        duration: '4:01',
+        audioUrl: '/sounds/undertale-undertale.mp3',
+        emotions: {
+          joy: 0.4,
+          wonder: 0.8,
+          anxiety: 0.1,
+          sadness: 0.7,
+          dynamism: 0.4
+        }
+      },
+      {
+        id: '3',
+        title: 'Fallen Down',
+        composer: 'Toby Fox',
+        releaseDate: '2015-09-15',
+        duration: '2:32',
+        audioUrl: '/sounds/undertale-fallen-down.mp3',
+        emotions: {
+          joy: 0.5,
+          wonder: 0.6,
+          anxiety: 0.1,
+          sadness: 0.6,
+          dynamism: 0.2
+        }
+      }
+    ]
   }
 ];

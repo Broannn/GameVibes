@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Star, History, ChevronDown, ChevronUp } from 'lucide-react';
-import { useGameRating } from '../hooks/useGameRating.ts';
+import { useGameRating } from '../hooks/useGameRating';
 
 interface GameRatingProps {
   gameId: string;
