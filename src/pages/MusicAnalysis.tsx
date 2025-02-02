@@ -429,7 +429,7 @@ export const MusicAnalysis = () => {
           </div>
 
           {/* Analyse Émotionnelle */}
-          <div className="bg-slate-800 rounded-xl p-4 sm:p-6 shadow-xl">
+          <div className="bg-slate-800 rounded-xl p-4 sm:p-6 shadow-xl mb-24">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold">Analyse Émotionnelle</h2>
